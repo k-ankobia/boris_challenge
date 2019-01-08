@@ -1,8 +1,13 @@
 #A Domain Model is an abstract representation of the Objects within a system
 class DockingStation
-  def initialize(test)
-    @test = test
+  # def initialize(release_bike)
+  # @release_bike = release_bike
+  # end
+
+  def release_bike
   end
 end
 
-docking_station = DockingStation.new("test")
+docking_station = DockingStation.new
+
+bike = docking_station.release_bike
