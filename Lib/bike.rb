@@ -1,4 +1,7 @@
-# class Bike
-#   def working?
-#   end
-# end
+class Bike
+
+  def working?
+    true
+  end
+
+end
