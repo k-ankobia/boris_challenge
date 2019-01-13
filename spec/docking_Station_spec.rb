@@ -4,6 +4,9 @@ describe DockingStation do
   #subject(:instance) {described_class.new}
 
   it { is_expected.to respond_to :release_bike }
+  end
+
+
 
   it "Releases a new bike" do
     bike1 = subject.release_bike
@@ -11,9 +14,12 @@ describe DockingStation do
     #expect(instance.release_bike.working?).to eq true
   end
 
+<<<<<<< HEAD
   it { is_expected.to respond_to :dock_bike }
 
   it { is_expected.to respond_to(:dock_bike).with(1).argument }
+=======
+>>>>>>> parent of 6e2da6b... Passing test for bike.new
 
   it "Checks after docking the bike that it's been docked" do
     expect(subject.dock_bike("bike1")).to eq (["bike1"])
