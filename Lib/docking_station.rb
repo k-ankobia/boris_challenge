@@ -1,14 +1,30 @@
-#A Domain Model is an abstract representation of the Objects within a system
-require 'bike'
+require_relative "./bike.rb"
+
 class DockingStation
+  attr_reader :bikes
 
-
-  def release_bike
-    Bike.new
+  def initialize(docked = 1, bikes = [], capacity = 10)
+    @docked = docked
+    @bikes = bikes
+    @capacity = capacity
   end
 
+  def release_bike
+    # if @docked > 0
+    #   @docked -= 1
+    bike = Bike.new
+    # else
+    #   raise "No bikes available!"
+    # end
+  end
+
+  def dock_bike(bike)
+    if @docked != @capacity
+      @bikes << bike
+      @docked += 1
+      return @bikes
+    else
+      raise "No room for more bikes!"
+    end
+  end
 end
-
-docking_station = DockingStation.new
-
-bike = docking_station.release_bike
